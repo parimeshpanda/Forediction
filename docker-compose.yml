@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend  
+      dockerfile: Dockerfile  
+    container_name: forediction-backend
+    ports:
+      - "8000:8000"  
+    networks:
+      - forediction-network
+    volumes:
+      - ./backend:/app
+
+  frontend:
+    build:
+      context: ./frontend  
+      dockerfile: Dockerfile  
+    container_name: forediction-frontend
+    ports:
+      - "3000:3000"  
+    networks:
+      - forediction-network
+    depends_on:
+      - backend  
+
+networks:
+  forediction-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+    driver: local

@@ -1,0 +1,23 @@
+body{
+    margin: 0 !important
+}
+::-webkit-scrollbar {
+    width: 3px; 
+    height: 3px; 
+    background: black;
+
+}
+.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+    border-color: grey !important;
+}
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #FE1F4B !important;
+}
+
+.plotly .main-svg{
+    background: '#FFFFFF' !important;
+}
+.MuiTab-root{
+    text-transform: capitalize !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+}
